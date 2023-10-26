@@ -6,7 +6,7 @@
 /*   By: emsoares <emsoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 15:02:12 by emsoares          #+#    #+#             */
-/*   Updated: 2023/10/26 16:08:30 by emsoares         ###   ########.fr       */
+/*   Updated: 2023/10/26 16:15:17 by emsoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,24 @@ int main()
 	Zombie *zombies;
 	int	num;
 
-	std::cout << "Choose the number of zombies: ";
-	std::cin >> n;
-	
-	if(!isNumeric(n))
+	while(1)
 	{
-		std::cout << "\nERROR: Input can only have numbers!" << std::endl;
-		return 1;
+		std::cout << "Choose the number of zombies: ";
+		std::cin >> n;
+		
+		if(!isNumeric(n))
+			std::cout << "\nERROR: Input can only have numbers!" << std::endl;
+		else
+		{
+			num = std::atoi(n.c_str());
+			break;
+		}
 	}
-	else
-		num = std::atoi(n.c_str());
 	std::cout << "Give a general name to your zombies: ";
 	std::cin >> name;
 	zombies = zombieHorde(num, name);
 	for(int i = 0; i < num; i++)
 		zombies[i].announce();
+	delete [] zombies;
 	return 0;
 }
