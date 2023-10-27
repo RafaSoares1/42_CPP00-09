@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emsoares <emsoares@student.42.fr>          +#+  +:+       +#+        */
+/*   By: emsoares <emsoares@student.42.fr>>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 15:02:12 by emsoares          #+#    #+#             */
-/*   Updated: 2023/10/26 16:15:17 by emsoares         ###   ########.fr       */
+/*   Updated: 2023/10/27 16:22:02 by emsoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,15 @@ bool	isNumeric(std::string str)
 	return true;
 }
 
-int main()
+int main(int ac, char **av)
 {
+	(void)av;
+
+	if(ac > 1)
+	{
+		std::cout << "Error: To many arguments!" << std::endl;
+		return 0;
+	}
 	std::string name;
 	std::string n;
 	Zombie *zombies;
