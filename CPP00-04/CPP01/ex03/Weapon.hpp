@@ -6,7 +6,7 @@
 /*   By: emsoares <emsoares@student.42.fr>>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 17:40:23 by emsoares          #+#    #+#             */
-/*   Updated: 2023/10/27 18:11:56 by emsoares         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:04:37 by emsoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@
 class Weapon
 {
 	private:
-		std::string type;
+		std::string _type;
 	public:
-		Weapon();
+		Weapon(void);
+		Weapon(std::string type);
 		~Weapon();
 		void setType(std::string type);
-		std::string getType();
+		const std::string& getType();
 };
 
 #endif
