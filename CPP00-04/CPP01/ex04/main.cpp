@@ -6,7 +6,7 @@
 /*   By: emsoares <emsoares@student.42.fr>>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:54:14 by emsoares          #+#    #+#             */
-/*   Updated: 2023/10/30 17:23:57 by emsoares         ###   ########.fr       */
+/*   Updated: 2023/10/31 11:09:42 by emsoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,13 @@ int main(int ac, char **av)
 	std::string s1 = av[2];
 	std::string s2 = av[3];
 	
-	std::ifstream inputFile;
+	std::ifstream inputFile; // used to open and read from an input file specified by the user
 	inputFile.open(filename.c_str());
 	if (!inputFile.is_open())
 		return (std::cerr << "Failed to open the file: " << filename <<std::endl, 2);
 	
 	std::string newfile = filename + ".replace";
-	std::ofstream outputFile;
+	std::ofstream outputFile; //used to open and write to an output file
 	outputFile.open(newfile.c_str());
 	if (!outputFile.is_open())
 		return (std::cerr << "Failed to open the file: " << newfile <<std::endl, 2);

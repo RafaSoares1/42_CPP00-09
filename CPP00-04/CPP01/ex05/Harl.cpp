@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emsoares <emsoares@student.42porto.com     +#+  +:+       +#+        */
+/*   By: emsoares <emsoares@student.42.fr>>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 21:26:48 by emsoares          #+#    #+#             */
-/*   Updated: 2023/10/30 22:06:46 by emsoares         ###   ########.fr       */
+/*   Updated: 2023/10/31 11:12:49 by emsoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ Harl::~Harl()
 }
 void Harl::complain(std::string level)
 {
-	void (Harl::*functions[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	void (Harl::*functions[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error}; // array of pointers to member functions of the Harl class
 	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	
 	for(int i = 0; i < 4 ; i++)
 		if (levels[i] == level)
-			(this->*functions[i])();
+			(this->*functions[i])(); // used to call a member function through a pointer to a member function, where functions[i] points to the appropriate member function based on the level
 }
 
 void Harl::debug()

@@ -6,7 +6,7 @@
 /*   By: emsoares <emsoares@student.42.fr>>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 12:15:29 by emsoares          #+#    #+#             */
-/*   Updated: 2023/10/30 15:30:25 by emsoares         ###   ########.fr       */
+/*   Updated: 2023/10/31 11:04:21 by emsoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ HumanB::HumanB(std::string name) : _name(name){}
 
 HumanB::~HumanB(){}
 
-void HumanB::setWeapon(Weapon& weapon)
+void HumanB::setWeapon(Weapon& weapon) //&-> pass an object by reference, otherwise any changes made to weapon inside the function would not affect the original Weapon object
 {
 	_weapon = &weapon;
 }
