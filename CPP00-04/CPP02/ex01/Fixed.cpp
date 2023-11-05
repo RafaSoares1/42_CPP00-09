@@ -6,7 +6,7 @@
 /*   By: emsoares <emsoares@student.42porto.com     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:06:03 by emsoares          #+#    #+#             */
-/*   Updated: 2023/11/05 11:27:41 by emsoares         ###   ########.fr       */
+/*   Updated: 2023/11/05 14:05:24 by emsoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,16 @@ Fixed::Fixed(Fixed const & src)
 	_fixedPoint = src._fixedPoint;
 }
 
+Fixed::Fixed(const int num) : _fixedPoint(num << _numberFractBits)
+{
+	std::cout << "Int constructor called" << std::endl;
+}
+
+Fixed::Fixed(const float num) : _fixedPoint(roundf(num * (1 << _numberFractBits)))
+{
+	std::cout << "Float constructor called" << std::endl;
+}
+
 Fixed  &Fixed::operator=(Fixed const &obj)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
@@ -35,6 +45,12 @@ Fixed  &Fixed::operator=(Fixed const &obj)
 	if (this != &obj)
 		_fixedPoint = obj.getRawBits();	
   return *this;
+}
+
+std::ostream& operator<<(std::ostream& out, const Fixed& obj)
+{
+	out << obj.toFloat();
+	return out;
 }
 
 int	Fixed::getRawBits(void) const
@@ -47,4 +63,15 @@ void Fixed::setRawBits( int const raw )
 {
 	std::cout << "setRawBits member function called\n";
 	_fixedPoint = raw;
+}
+
+int Fixed::toInt(void) const
+{
+	return (_fixedPoint >> _numberFractBits);	
+}
+
+float Fixed::toFloat(void) const
+{
+	float value = static_cast<float>(_fixedPoint) / (1 << _numberFractBits);
+	return value;
 }
