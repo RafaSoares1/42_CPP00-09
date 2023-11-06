@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emsoares <emsoares@student.42porto.com     +#+  +:+       +#+        */
+/*   By: emsoares <emsoares@student.42.fr>>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:06:03 by emsoares          #+#    #+#             */
-/*   Updated: 2023/11/05 14:05:24 by emsoares         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:31:19 by emsoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,6 @@ Fixed  &Fixed::operator=(Fixed const &obj)
   return *this;
 }
 
-std::ostream& operator<<(std::ostream& out, const Fixed& obj)
-{
-	out << obj.toFloat();
-	return out;
-}
-
 int	Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
@@ -74,4 +68,10 @@ float Fixed::toFloat(void) const
 {
 	float value = static_cast<float>(_fixedPoint) / (1 << _numberFractBits);
 	return value;
+}
+
+std::ostream& operator<<(std::ostream& out, Fixed const & obj)
+{
+	out << obj.toFloat();
+	return out;
 }

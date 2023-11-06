@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emsoares <emsoares@student.42porto.com     +#+  +:+       +#+        */
+/*   By: emsoares <emsoares@student.42.fr>>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:06:18 by emsoares          #+#    #+#             */
-/*   Updated: 2023/11/05 12:49:05 by emsoares         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:29:20 by emsoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+
+
 
 int main( void ) {
 Fixed a;
