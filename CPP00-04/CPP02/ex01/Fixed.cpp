@@ -6,7 +6,7 @@
 /*   By: emsoares <emsoares@student.42.fr>>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:06:03 by emsoares          #+#    #+#             */
-/*   Updated: 2023/11/06 12:31:19 by emsoares         ###   ########.fr       */
+/*   Updated: 2023/11/07 10:13:30 by emsoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int Fixed::toInt(void) const
 	return (_fixedPoint >> _numberFractBits);	
 }
 
-float Fixed::toFloat(void) const
+float Fixed::toFloat(void) const //https://embeddedartistry.com/blog/2018/07/12/simple-fixed-point-conversion-in-c/
 {
 	float value = static_cast<float>(_fixedPoint) / (1 << _numberFractBits);
 	return value;
