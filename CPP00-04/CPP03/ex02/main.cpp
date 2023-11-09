@@ -10,49 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void)
 {
-	std::cout << "\033[1;36mCLAPTRAP TESTS\033[0m" << std::endl;
+	std::cout << "\033[1;36mSCAVTRAP TESTS\033[0m" << std::endl;
 	std::cout << std::endl;
-	std::cout << "\033[1;33mTest 1: creating ClapTraps\033[0m" << std::endl;
+	std::cout << "\033[1;33mTest 1: creating ClapTrap and FragTrap\033[0m" << std::endl;
 	{
-		ClapTrap	A("Roberto");
-		ClapTrap	B("Antunes");
+		FragTrap	B("SC4V-TP");
 	}
 	std::cout << std::endl;
-	std::cout << "\033[1;33mTest 2: ClapTrap A attacks ClapTrap B\033[0m" << std::endl;
+	std::cout << "\033[1;33mTest 2: FragTrap Gives High Five\033[0m" << std::endl;
 	{
-		ClapTrap	A("Roberto");
-		ClapTrap	B("Antunes");
+		FragTrap	B("SC4V-TP");
 
-		A.attack("Antunes");
-		B.takeDamage(0);
-	}
-	std::cout << std::endl;
-	std::cout << "\033[1;33mTest 3: ClapTrap B repairs itself by 5 HP\033[0m" << std::endl;
-	{
-		ClapTrap	A("Roberto");
-		ClapTrap	B("Antunes");
-
-		B.beRepaired(5);
-	}
-	std::cout << std::endl;
-	std::cout << "\033[1;33mTest 4: ClapTrap B kills ClapTrap A\033[0m" << std::endl;
-	{
-		ClapTrap	A("Roberto");
-		ClapTrap	B("Antunes");
-
-		A.takeDamage(10);
-	}
-	std::cout << std::endl;
-	std::cout << "\033[1;33mTest 5: ClapTrap B dies too\033[0m" << std::endl;
-	{
-		ClapTrap	A("Roberto");
-		ClapTrap	B("Antunes");
-
-		B.takeDamage(666);
+		B.highFivesGuys();
 	}
 	return (0);
 }

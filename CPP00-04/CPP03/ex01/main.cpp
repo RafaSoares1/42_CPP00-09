@@ -10,49 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main(void)
 {
-	std::cout << "\033[1;36mCLAPTRAP TESTS\033[0m" << std::endl;
+	std::cout << "\033[1;36mSCAVTRAP TESTS\033[0m" << std::endl;
 	std::cout << std::endl;
-	std::cout << "\033[1;33mTest 1: creating ClapTraps\033[0m" << std::endl;
+	std::cout << "\033[1;33mTest 1: creating ClapTrap and ScavTrap\033[0m" << std::endl;
 	{
-		ClapTrap	A("Roberto");
-		ClapTrap	B("Antunes");
+		ClapTrap	A("R2D2");
+		ScavTrap	B("SC4V-TP");
 	}
 	std::cout << std::endl;
-	std::cout << "\033[1;33mTest 2: ClapTrap A attacks ClapTrap B\033[0m" << std::endl;
+	std::cout << "\033[1;33mTest 2: ScavTrap attacks ClapTrap\033[0m" << std::endl;
 	{
-		ClapTrap	A("Roberto");
-		ClapTrap	B("Antunes");
+		ClapTrap	A("R2D2");
+		ScavTrap	B("SC4V-TP");
 
-		A.attack("Antunes");
-		B.takeDamage(0);
+		B.attack("R2D2");
+		A.takeDamage(20);
 	}
 	std::cout << std::endl;
-	std::cout << "\033[1;33mTest 3: ClapTrap B repairs itself by 5 HP\033[0m" << std::endl;
+	std::cout << "\033[1;33mTest 3: ScavTrap enters gate keeper mode\033[0m" << std::endl;
 	{
-		ClapTrap	A("Roberto");
-		ClapTrap	B("Antunes");
+		ScavTrap	B("SC4V-TP");
 
-		B.beRepaired(5);
-	}
-	std::cout << std::endl;
-	std::cout << "\033[1;33mTest 4: ClapTrap B kills ClapTrap A\033[0m" << std::endl;
-	{
-		ClapTrap	A("Roberto");
-		ClapTrap	B("Antunes");
-
-		A.takeDamage(10);
-	}
-	std::cout << std::endl;
-	std::cout << "\033[1;33mTest 5: ClapTrap B dies too\033[0m" << std::endl;
-	{
-		ClapTrap	A("Roberto");
-		ClapTrap	B("Antunes");
-
-		B.takeDamage(666);
+		B.guardGate();
 	}
 	return (0);
 }
