@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emsoares <emsoares@student.42.fr>>         +#+  +:+       +#+        */
+/*   By: emsoares <emsoares@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:15:41 by emsoares          #+#    #+#             */
-/*   Updated: 2023/11/09 18:17:58 by emsoares         ###   ########.fr       */
+/*   Updated: 2023/11/10 12:16:56 by emsoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "FragTrap.hpp"
 
-class DiamondTrap : virtual public FragTrap, virtual public ScavTrap
+class DiamondTrap : virtual public ScavTrap, virtual public FragTrap
 {
 	private:
 		std::string _name;
@@ -24,7 +24,13 @@ class DiamondTrap : virtual public FragTrap, virtual public ScavTrap
 		DiamondTrap(std::string name);
 		DiamondTrap(DiamondTrap &src);
 		DiamondTrap & operator=(DiamondTrap const& obj);
-		~DiamondTrap();	
+		~DiamondTrap();
+		void whoAmI();
+		int getAD();
+		int getHP();
+		int getEP();
+		
+		
 };
 
 #endif

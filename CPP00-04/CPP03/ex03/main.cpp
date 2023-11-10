@@ -10,22 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int	main(void)
 {
-	std::cout << "\033[1;36mSCAVTRAP TESTS\033[0m" << std::endl;
-	std::cout << std::endl;
-	std::cout << "\033[1;33mTest 1: creating ClapTrap and FragTrap\033[0m" << std::endl;
-	{
-		FragTrap	B("SC4V-TP");
-	}
-	std::cout << std::endl;
-	std::cout << "\033[1;33mTest 2: FragTrap Gives High Five\033[0m" << std::endl;
-	{
-		FragTrap	B("SC4V-TP");
+	DiamondTrap a("Rafael");
+	std::cout << "💎 Attack Damage VALUE: " << a.getAD() << std::endl;
+	std::cout << "💎 Energy VALUE: " << a.getEP() << std::endl;
+	std::cout << "💎 Health Points VALUE : " << a.getHP() << std::endl;
 
-		B.highFivesGuys();
-	}
-	return (0);
+	std::cout << std::endl;
+
+	a.whoAmI();
+
+	std::cout << std::endl;
+
+	a.attack("Joao");
+	std::cout << std::endl;
+	
+	return 0;
 }
