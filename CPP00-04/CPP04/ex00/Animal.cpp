@@ -6,7 +6,7 @@
 /*   By: emsoares <emsoares@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:58:22 by emsoares          #+#    #+#             */
-/*   Updated: 2023/11/13 12:44:41 by emsoares         ###   ########.fr       */
+/*   Updated: 2023/11/14 10:58:33 by emsoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,10 @@ Animal::~Animal()
 	std::cout << "Animal " << type << " destructor called!" << std::endl;
 }
 
-Animal::Animal(std::string name) : type(name){}
+Animal::Animal(std::string name) : type(name)
+{
+	std::cout << this->type << " Animal has been created(Parent)" << std::endl;
+}
 
 std::string Animal::getType(void) const
 {
