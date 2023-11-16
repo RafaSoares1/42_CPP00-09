@@ -6,7 +6,7 @@
 /*   By: emsoares <emsoares@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:13:13 by emsoares          #+#    #+#             */
-/*   Updated: 2023/11/14 15:53:00 by emsoares         ###   ########.fr       */
+/*   Updated: 2023/11/15 11:14:02 by emsoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ Dog &Dog::operator=(Dog const& obj)
 
 Dog::~Dog()
 {
-	std::cout << "Dog destructor called!" << std::endl;
 	delete _brain;
+	std::cout << "Dog destructor called!" << std::endl;
 }
 
 //-----------------------------------

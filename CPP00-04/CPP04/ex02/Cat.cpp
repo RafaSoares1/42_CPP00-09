@@ -6,7 +6,7 @@
 /*   By: emsoares <emsoares@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:31:47 by emsoares          #+#    #+#             */
-/*   Updated: 2023/11/14 15:57:39 by emsoares         ###   ########.fr       */
+/*   Updated: 2023/11/15 11:13:52 by emsoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ Cat &Cat::operator=(Cat const& obj)
 
 Cat::~Cat()
 {
-	std::cout << "Cat destructor called!" << std::endl;
 	delete _brain;
+	std::cout << "Cat destructor called!" << std::endl;
 }
 
 //-----------------------------------
