@@ -1,6 +1,6 @@
 # C++ Programming Modules
 
-This repository contains a series of modules that cover various aspects of C++ programming. Each module focuses on specific topics to help you build a strong foundation in C++ development. Below is an overview of each module along with key concepts covered.
+This repository contains a series of modules that cover various aspects of C++ programming. Each module focuses on specific topics to help me to build a strong foundation in C++ development. Below is an overview of each module along with key concepts covered.
 
 ## Module 00: Basics
 - **Namespace:** Understanding and using namespaces in C++.
